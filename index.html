@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="./stil.css" type="text/css">
   </head>
   <body>
-    <img src="http://amery.se/bilder/230_Vaardnadstvist_22x12cm.jpg" alt="Vårdnadstvist, akvarell, 22x12 cm">
+    <div class="bildruta">
+      <img src="http://amery.se/bilder/230_Vaardnadstvist_22x12cm.jpg" alt="Vårdnadstvist, akvarell, 22x12 cm">
+    </div>
     <h1>Slumpen som vägvisare</h1>
     <div class="arbetsytan">
       <div class="textruterutan">
@@ -26,17 +28,33 @@
        }
 
         var klarMarkera = function() {
+          $('#go').removeClass('oklart');
           $('#go').addClass('klartAttTesta')
         }
 
         var bytBakgrund = function() {
-          $('html').addClass('ombyttbakgrund')
+          $('body').addClass('ombyttbakgrund')
         }
 
-        $('h1').click(bytBakgrund)
+        var BytBakgrunden = function() {
+          if ($('html').hasClass('ombyttbakgrund')) {
+            $('html').removeClass('ombyttbakgrund')
+          }
+          else {
+            $('html').addClass('ombyttbakgrund')
+          }
+        }
+
+        var retasMedGo = function() {
+            $('#go').toggleClass('bred')
+        }
+
+
+        $('h1').click(BytBakgrunden)
         $('.Fler').click(leggTill)
         $('.Fler').click(klarMarkera)
-        
+        $('.bildruta').click(retasMedGo)
+
       })
 
     </script>

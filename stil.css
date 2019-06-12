@@ -21,7 +21,7 @@ h1 {
   letter-spacing: 1px;
   font-size: 3em;
   font-weight: 200;
-  margin: 80px 0px -40px 0px;
+  margin: 80px 0px -10px 0px;
 
 }
 
@@ -30,10 +30,19 @@ button {
   color: #ffffff;
   width: 100px;
   height: 40px;
+  margin-top: 10px;
+  border-color: #939d47;
+}
+
+.bildruta {
+  background-color: #ffffff;
+  padding-bottom: 10px;
+  padding-right: 5px;
+  padding-left: 3px;
 }
 
 .arbetsytan {
-  margin: 70px 3px;
+  margin: 30px 3px;
   width: 470px;
   /*
   background-color: #eeeeee;
@@ -54,11 +63,14 @@ button {
   background-color: #ffff99;
   color: #4b5c30;
   padding: 3px 7px;
+  border-color: #bbb760;
+  margin: 3px 0px;
 }
 
 .oklart{
   background-color: #dfcf77;
   color: #fee38a;
+  border-color: #bbb760;
 }
 
 .klartAttTesta {
@@ -66,6 +78,10 @@ button {
   color: #ffffff;
   width: 100px;
   height: 40px;
+}
+
+.bred {
+  width: 100%;
 }
 
 .ombyttbakgrund {
