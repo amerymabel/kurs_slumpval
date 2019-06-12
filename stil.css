@@ -10,8 +10,8 @@ body {
 
 html {
   background-image: linear-gradient(#939d47, #fee38a);
- background-repeat: no-repeat;
- height: 100%;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
 h1 {
@@ -27,8 +27,9 @@ h1 {
 
 button {
   background-color: #4b5c30;
-  color: #dddddd;
+  color: #ffffff;
   width: 100px;
+  height: 40px;
 }
 
 .arbetsytan {
@@ -42,12 +43,12 @@ button {
 .textruterutan {
   width: inherit;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  /*justify-content: space-between;*/
 
 }
 
-.textrutan {
+.textruta {
   height:30px;
   font-size: 26px;
   background-color: #ffff99;
@@ -55,8 +56,18 @@ button {
   padding: 3px 7px;
 }
 
-#go {
+.oklart{
+  background-color: #dfcf77;
+  color: #fee38a;
+}
+
+.klartAttTesta {
+  background-color: #4b5c30;
   color: #ffffff;
   width: 100px;
   height: 40px;
+}
+
+.ombyttbakgrund {
+  background-image: linear-gradient(#fee38a, #939d47);
 }

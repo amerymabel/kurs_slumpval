@@ -10,11 +10,35 @@
     <h1>Slumpen som vägvisare</h1>
     <div class="arbetsytan">
       <div class="textruterutan">
-        <input placeholder="Nånting" class="textrutan"></input>
-        <button>Lägg till</button>
+        <input placeholder="Nånting" class="textruta"></input>
       </div>
-
+      <button class="Fler">Lägg till</button>
     </div>
-    <button type="button" id="go">Pröva!</button>
+    <div class="resultat"></div>
+    <button class="oklart" id="go">Pröva!</button>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.resultat').hide()
+
+        var leggTill = function() {
+          $('.textruterutan').append('<input class="textruta"></input>')
+       }
+
+        var klarMarkera = function() {
+          $('#go').addClass('klartAttTesta')
+        }
+
+        var bytBakgrund = function() {
+          $('html').addClass('ombyttbakgrund')
+        }
+
+        $('h1').click(bytBakgrund)
+        $('.Fler').click(leggTill)
+        $('.Fler').click(klarMarkera)
+        
+      })
+
+    </script>
   </body>
 </html
