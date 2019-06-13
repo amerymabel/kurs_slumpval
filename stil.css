@@ -87,3 +87,12 @@ button {
 .ombyttbakgrund {
   background-image: linear-gradient(#fee38a, #939d47);
 }
+
+.resultat{
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+  font-size: 5em;
+  font-family: verdana;
+  color: #ab422f;
+}

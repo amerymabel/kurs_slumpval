@@ -22,18 +22,16 @@
     <script>
       $(document).ready(function(){
         $('.resultat').hide()
+        $('.textruta').focus()
 
         var leggTill = function() {
           $('.textruterutan').append('<input class="textruta"></input>')
-       }
-
-        var klarMarkera = function() {
-          $('#go').removeClass('oklart');
-          $('#go').addClass('klartAttTesta')
+          $('input').last().focus()
         }
 
-        var bytBakgrund = function() {
-          $('body').addClass('ombyttbakgrund')
+        var klarMarkera = function() {
+            $('#go').removeClass('oklart')
+            $('#go').addClass('klartAttTesta')
         }
 
         var BytBakgrunden = function() {
@@ -49,11 +47,28 @@
             $('#go').toggleClass('bred')
         }
 
-
         $('h1').click(BytBakgrunden)
         $('.Fler').click(leggTill)
         $('.Fler').click(klarMarkera)
         $('.bildruta').click(retasMedGo)
+
+        //var alternativ=['vitlök','purjo','salladslök','gul lök']
+        var alternativ = []
+        var doit = function() {
+          $('.arbetsytan').hide()
+          $('.resultat').css('display', 'flex')
+          $('input').each(function() {
+            if($(this).val()!='')
+              alternativ.push($(this).val())
+          })
+          console.log(alternativ)
+          var utvald = alternativ[Math.floor(Math.random() * alternativ.length)]
+          console.log(utvald)
+          $('.resultat').text(utvald)
+          $('h1').text('Beslutet blev:')
+          $('#go').hide()
+        }
+        $('#go').click(doit)
 
       })
 
